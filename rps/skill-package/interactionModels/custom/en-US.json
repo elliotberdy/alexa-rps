@@ -1,0 +1,117 @@
+{
+  "interactionModel": {
+    "dialog": {
+      "intents": [
+        {
+          "slots": [
+            {
+              "name": "rpschoice",
+              "elicitationRequired": true,
+              "type": "rpschoice",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.999118534233.990894427194"
+              }
+            }
+          ],
+          "name": "answerIntent",
+          "confirmationRequired": false,
+          "prompts": {}
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "languageModel": {
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "slots": [],
+          "name": "HelloWorldIntent",
+          "samples": [
+            "hello",
+            "how are you",
+            "say hi world",
+            "say hi",
+            "hi",
+            "say hello world",
+            "say hello"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "slots": [
+            {
+              "name": "rpschoice",
+              "type": "rpschoice",
+              "samples": [
+                "scissors",
+                "paper",
+                "rock"
+              ]
+            }
+          ],
+          "name": "answerIntent",
+          "samples": [
+            "pick {rpschoice}",
+            "{rpschoice}",
+            "select {rpschoice}",
+            "I choose {rpschoice}",
+            "I\u0027m going for {rpschoice}"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "value": "scissors"
+              }
+            },
+            {
+              "name": {
+                "value": "paper"
+              }
+            },
+            {
+              "name": {
+                "value": "rock"
+              }
+            }
+          ],
+          "name": "rpschoice"
+        }
+      ],
+      "invocationName": "rock paper scissors"
+    },
+    "prompts": [
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Please select rock, paper, or scissors"
+          }
+        ],
+        "id": "Elicit.Slot.999118534233.990894427194"
+      }
+    ]
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "interactionModel": {
+    "dialog": {
+      "intents": [
+        {
+          "slots": [
+            {
+              "name": "rpschoice",
+              "elicitationRequired": true,
+              "type": "rpschoice",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1626903715718.139407992372"
+              }
+            }
+          ],
+          "name": "answerIntent",
+          "confirmationRequired": false,
+          "prompts": {}
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "languageModel": {
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": [
+            "sur quoi porte ce jeu",
+            "les règles de ce jeu",
+            "les règles du jeu",
+            "quelles sont les règles",
+            "règles"
+          ]
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "slots": [
+            {
+              "name": "rpschoice",
+              "type": "rpschoice",
+              "samples": [
+                "ciseaux",
+                "papier",
+                "pierre"
+              ]
+            }
+          ],
+          "name": "answerIntent",
+          "samples": [
+            "je prends {rpschoice}",
+            "je choisis {rpschoice}",
+            "{rpschoice}",
+            "sélectionner {rpschoice}",
+            "disons {rpschoice}"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "value": "ciseaux"
+              }
+            },
+            {
+              "name": {
+                "value": "papier"
+              }
+            },
+            {
+              "name": {
+                "value": "pierre"
+              }
+            }
+          ],
+          "name": "rpschoice"
+        }
+      ],
+      "invocationName": "pierre papier ciseaux"
+    },
+    "prompts": [
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Veuillez choisir pierre, papier, ou ciseaux"
+          }
+        ],
+        "id": "Elicit.Slot.1626903715718.139407992372"
+      }
+    ]
+  }
+}
